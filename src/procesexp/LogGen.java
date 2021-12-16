@@ -24,7 +24,7 @@ public class LogGen {
 private static String line = "-----------------------------------------------------------------------------\n";
 private static String name;
 private static String header;
-public static String path = "C:/Users/Academia/AppData/Local/Temp/mylog";
+public static String path = "log";
 //private String abspath = getClass().getProtectionDomain().getCodeSource().getLocation().toExternalForm();
 
 public static void start() {
@@ -77,7 +77,8 @@ public static void start() {
             System.out.println(er);
         }
     }
-    private static String er = "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⢉⢉⠉⠉⠻⣿⣿⣿⣿⣿⣿\n" +
+    private static String er = "Error: Log no tiene permisos de escritura\n" +
+                        "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⢉⢉⠉⠉⠻⣿⣿⣿⣿⣿⣿\n" +
                         "⣿⣿⣿⣿⣿⣿⣿⠟⠠⡰⣕⣗⣷⣧⣀⣅⠘⣿⣿⣿⣿⣿\n" +
                         "⣿⣿⣿⣿⣿⣿⠃⣠⣳⣟⣿⣿⣷⣿⡿⣜⠄⣿⣿⣿⣿⣿\n" +
                         "⣿⣿⣿⣿⡿⠁⠄⣳⢷⣿⣿⣿⣿⡿⣝⠖⠄⣿⣿⣿⣿⣿\n" +
@@ -97,5 +98,6 @@ public static void start() {
                         "⣿⣿⣿⣿⣿⡆⠄⢣⣻⣽⣿⣿⣟⣾⡮⡺⡸⠸⣿⣿⣿⣿\n" +
                         "⣿⣿⡿⠛⠉⠁⠄⢕⡳⣽⡾⣿⢽⣯⡿⣮⢚⣅⠹⣿⣿⣿\n" +
                         "⡿⠋⠄⠄⠄⠄⢀⠒⠝⣞⢿⡿⣿⣽⢿⡽⣧⣳⡅⠌⠻⣿\n" +
-                        "⠁⠄⠄⠄⠄⠄⠐⡐⠱⡱⣻⡻⣝⣮⣟⣿⣻⣟⣻⡺⣊";
+                        "⠁⠄⠄⠄⠄⠄⠐⡐⠱⡱⣻⡻⣝⣮⣟⣿⣻⣟⣻⡺⣊⠌\n" +
+                        "Feliz Navidad!";
 }

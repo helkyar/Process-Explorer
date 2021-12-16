@@ -62,12 +62,17 @@ public class Resources{
         long totalSpace = file[i].getTotalSpace()/mb; //total disk space in mb.
         long freeSpace =  file[i].getFreeSpace()/mb; //unallocated / free disk space in mb.
         long usedSpace = totalSpace-freeSpace; //unallocated / free disk space in mb.
-            
         return getPercentage(totalSpace, freeSpace);
     }    
     
     private int getPercentage(long total, long free){
-        return (int) ((total - free)*100/total);
+        int p = 1;
+        try {
+            p=(int) ((total - free)*100/total);
+        } catch (Exception e) {
+            LogGen.error("SEVERE: method Resources.getPercentage"+e.getMessage());
+        }
+        return p;
     }
     
     public boolean isConnected(){
